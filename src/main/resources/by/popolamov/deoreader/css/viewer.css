@@ -1,0 +1,130 @@
+/**
+ * viewer.css - Стили для просмотра PDF в pdf.js
+ * Пожалуйста, убедитесь, что этот файл находится в директории resources вашего проекта.
+ **/
+
+/* Стили для внешнего контейнера */
+#outerContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* Стили для контейнера с прокруткой страниц */
+#sidebarContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: transform 0.3s;
+    transform: translateX(-100%);
+    z-index: 4;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ccc;
+}
+
+/* Стили для кнопки открытия/закрытия боковой панели */
+#sidebarToggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Стили для страницы */
+.page {
+    display: block;
+    overflow: hidden;
+}
+
+/* Стили для контейнера страницы */
+#viewerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* Стили для оболочки страницы */
+#viewer {
+    display: inline-block;
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+    border-left: 1px solid #ccc;
+}
+
+/* Стили для контейнера управления масштабом */
+#scaleSelectContainer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Стили для контейнера масштаба */
+#scaleSelect {
+    font-size: 12px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    color: #333;
+    background-color: #fff;
+    display: inline-block;
+    width: 100px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* Стили для элементов управления масштабом */
+.scaleSelectOption {
+    padding: 2px 8px;
+}
+
+/* Стили для номера страницы */
+#pageNumber {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Стили для кнопки переключения страницы назад */
+#previous {
+    cursor: pointer;
+    user-select: none;
+    margin-right: 10px;
+}
+
+/* Стили для кнопки переключения страницы вперед */
+#next {
+    cursor: pointer;
+    user-select: none;
+    margin-left: 10px;
+}
+
+/* Стили для загрузки страницы */
+.loadingSpinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+/* Анимация вращения загрузки страницы */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

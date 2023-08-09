@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane prefHeight="540" prefWidth="960" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="by.popolamov.deoreader.views.impl.MainViewImpl">
+    <center>
+        <BorderPane BorderPane.alignment="CENTER">
+            <center>
+                <Pane prefHeight="200.0" prefWidth="1070.0" style="-fx-background-color: #2f3437;"/>
+            </center>
+            <top>
+                <BorderPane prefHeight="40.0" prefWidth="894.0" style="-fx-background-color: #2f3437;"
+                            BorderPane.alignment="CENTER">
+                    <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0"
+                              BorderPane.alignment="CENTER">
+                            <children>
+                                <Button alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false"
+                                        nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="40.0"
+                                        style="-fx-background-color: transparent;" text="grid">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../icons/grid-white.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false"
+                                        nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="40.0"
+                                        style="-fx-background-color: transparent;" text="list">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../icons/list-white.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false"
+                                        nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="40.0"
+                                        style="-fx-background-color: transparent;" text="square-list">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../icons/square-list-white.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </right>
+                    <left>
+                        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="TOP_RIGHT">
+                            <children>
+                                <Button contentDisplay="CENTER" mnemonicParsing="false" visible="false"/>
+                            </children>
+                        </Pane>
+                    </left>
+                    <center>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label text="Shell" textFill="WHITE">
+                                    <font>
+                                        <Font size="24.0"/>
+                                    </font>
+                                    <opaqueInsets>
+                                        <Insets left="20.0" right="20.0"/>
+                                    </opaqueInsets>
+                                </Label>
+                                <ChoiceBox prefWidth="150.0"/>
+                            </children>
+                            <opaqueInsets>
+                                <Insets/>
+                            </opaqueInsets>
+                        </HBox>
+                    </center>
+                </BorderPane>
+            </top>
+        </BorderPane>
+    </center>
+    <left>
+        <VBox fx:id="leftPane" prefHeight="490.0" prefWidth="50.0" style="-fx-background-color: #4f585d;"
+              BorderPane.alignment="CENTER">
+            <HBox cache="true" prefHeight="50.0" prefWidth="150.0">
+                <children>
+                    <Button minHeight="40.0" minWidth="40.0" style="-fx-background-color: green;">
+                        <HBox.margin>
+                            <Insets left="5.0"/>
+                        </HBox.margin>
+                    </Button>
+                    <Label fx:id="label1" style="-fx-text-fill: white;" text="Books" visible="false">
+                        <HBox.margin>
+                            <Insets top="5.0"/>
+                        </HBox.margin>
+                        <font>
+                            <Font name="Ebrima" size="20.0"/>
+                        </font>
+                    </Label>
+                </children>
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+                <padding>
+                    <Insets left="8.0" top="5.0"/>
+                </padding>
+                <opaqueInsets>
+                    <Insets/>
+                </opaqueInsets>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="150.0">
+                <children>
+                    <Button minHeight="40.0" minWidth="40.0" style="-fx-background-color: blue;">
+                        <HBox.margin>
+                            <Insets left="5.0"/>
+                        </HBox.margin>
+                    </Button>
+                    <Label fx:id="label2" style="-fx-text-fill: white;" text="Favorite" visible="false">
+                        <HBox.margin>
+                            <Insets top="5.0"/>
+                        </HBox.margin>
+                        <font>
+                            <Font size="20.0"/>
+                        </font>
+                    </Label>
+                </children>
+                <padding>
+                    <Insets left="8.0" top="5.0"/>
+                </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="60.0" prefHeight="50.0" prefWidth="150.0">
+                <children>
+                    <Button minHeight="40.0" minWidth="40.0" style="-fx-background-color: red;">
+                        <HBox.margin>
+                            <Insets left="5.0"/>
+                        </HBox.margin>
+                    </Button>
+                    <Label fx:id="label3" style="-fx-text-fill: white;" text="Notes" visible="false">
+                        <HBox.margin>
+                            <Insets top="5.0"/>
+                        </HBox.margin>
+                        <font>
+                            <Font size="20.0"/>
+                        </font>
+                    </Label>
+                </children>
+                <padding>
+                    <Insets left="8.0" top="5.0"/>
+                </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="111.0" prefHeight="50.0" prefWidth="150.0">
+                <children>
+                    <Button minHeight="40.0" minWidth="40.0" style="-fx-background-color: red;">
+                        <HBox.margin>
+                            <Insets left="5.0"/>
+                        </HBox.margin>
+                    </Button>
+                    <Label fx:id="label4" style="-fx-text-fill: white;" text="Bookmarks" visible="false">
+                        <HBox.margin>
+                            <Insets top="5.0"/>
+                        </HBox.margin>
+                        <font>
+                            <Font size="20.0"/>
+                        </font>
+                    </Label>
+                </children>
+                <padding>
+                    <Insets left="8.0" top="5.0"/>
+                </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="161.0" prefHeight="50.0" prefWidth="150.0">
+                <children>
+                    <Button minHeight="40.0" minWidth="40.0" style="-fx-background-color: red;">
+                        <HBox.margin>
+                            <Insets left="5.0"/>
+                        </HBox.margin>
+                    </Button>
+                    <Label fx:id="label5" style="-fx-text-fill: white;" text="Trash" visible="false">
+                        <HBox.margin>
+                            <Insets top="5.0"/>
+                        </HBox.margin>
+                        <font>
+                            <Font size="20.0"/>
+                        </font>
+                    </Label>
+                </children>
+                <padding>
+                    <Insets left="8.0" top="5.0"/>
+                </padding>
+            </HBox>
+        </VBox>
+    </left>
+    <right>
+        <HBox BorderPane.alignment="CENTER"/>
+    </right>
+    <top>
+        <AnchorPane style="-fx-background-color: #123;" BorderPane.alignment="CENTER">
+            <children>
+                <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0"
+                            AnchorPane.topAnchor="0.0">
+                    <left>
+                        <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button contentDisplay="GRAPHIC_ONLY" onAction="#expandLeftPane" prefHeight="35.0"
+                                        prefWidth="50.0" style="-fx-background-color: transparent;">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="40.0" smooth="false">
+                                            <image>
+                                                <Image url="@../icons/menu-white.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Label text="DeoReader" textFill="WHITE">
+                                    <font>
+                                        <Font name="Candara" size="30.0"/>
+                                    </font>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0"/>
+                                    </padding>
+                                </Label>
+                                <TextField prefHeight="35.0" prefWidth="240.0"/>
+                                <HBox alignment="CENTER" style="-fx-alignment: center;">
+                                    <children>
+                                        <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false"
+                                                prefHeight="35.0" prefWidth="40.0"
+                                                style="-fx-background-color: transparent;" text="sort">
+                                            <HBox.margin>
+                                                <Insets right="5.0"/>
+                                            </HBox.margin>
+                                            <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@../icons/sort-white.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+
+                                        <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false"
+                                                prefHeight="35.0" prefWidth="40.0"
+                                                style="-fx-background-color: transparent;" text="cloud">
+                                            <HBox.margin>
+                                                <Insets right="5.0"/>
+                                            </HBox.margin>
+                                            <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@../icons/cloud-white.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false"
+                                                prefHeight="35.0" prefWidth="40.0"
+                                                style="-fx-background-color: transparent;" text="refresh">
+                                            <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@../icons/refresh-white.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                    <padding>
+                                        <Insets left="20.0"/>
+                                    </padding>
+                                    <HBox.margin>
+                                        <Insets/>
+                                    </HBox.margin>
+                                </HBox>
+                            </children>
+                            <BorderPane.margin>
+                                <Insets/>
+                            </BorderPane.margin>
+                        </HBox>
+                    </left>
+                    <right>
+                        <HBox style="-fx-padding: 0 10 0 0; -fx-alignment: center_right;" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false"
+                                        nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="40.0"
+                                        style="-fx-background-color: transparent;" text="upload">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../icons/upload-white.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false"
+                                        nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="40.0"
+                                        style="-fx-background-color: transparent;" text="setting">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../icons/settings-white.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </right>
+                </BorderPane>
+            </children>
+            <padding>
+                <Insets bottom="5.0" top="5.0"/>
+            </padding>
+        </AnchorPane>
+    </top>
+</BorderPane>
