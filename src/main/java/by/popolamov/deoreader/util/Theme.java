@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class ThemeManager {
+public class Theme {
     private Properties themes;
 
-    public ThemeManager() {
+    public Theme() {
         themes = new Properties();
         try (InputStream inputStream = getClass().getResourceAsStream("/se.properties")) {
             themes.load(inputStream);

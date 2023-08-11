@@ -5,10 +5,10 @@ import by.popolamov.deoreader.model.Language;
 import java.io.*;
 import java.util.Properties;
 
-public class SettingsManager {
+public class Settings {
     private Properties settings;
 
-    public SettingsManager() {
+    public Settings() {
         settings = new Properties();
         try (InputStream inputStream = getClass().getResourceAsStream("/settings.properties")) {
             settings.load(inputStream);

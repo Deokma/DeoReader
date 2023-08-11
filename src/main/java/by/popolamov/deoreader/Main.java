@@ -1,7 +1,5 @@
 package by.popolamov.deoreader;
 
-import by.popolamov.deoreader.presenters.HomePresenter;
-import by.popolamov.deoreader.views.impl.MainViewImpl;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,12 +14,6 @@ public class Main extends Application {
         // Load FXML file and create the view
         FXMLLoader loader = new FXMLLoader(getClass().getResource("pages/main-view.fxml"));
         Pane root = loader.load();
-
-        // Get an instance of the view
-        MainViewImpl view = loader.getController();
-
-        // Create the presenter and associate it with the view
-        HomePresenter presenter = new HomePresenter(view);
 
         // Create the scene and set it on the primary stage
         Scene scene = new Scene(root, 960, 540);
